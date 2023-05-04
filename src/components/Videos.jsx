@@ -6,7 +6,7 @@ const Videos = ({ videos }) => {
   console.log(videos);
   return (
     <Stack direction={{ xs: "column", md: "row"}} flexWrap="wrap"
-      sx={{ overflowY: "auto"}} mr="10px"
+      mr="10px"
     >
       { videos.map((items, idx) => (
         <VideoCard items={items} />
