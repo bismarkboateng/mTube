@@ -1,0 +1,19 @@
+* {
+    body: 0;
+    margin: 0;
+}
+
+.input-field {
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 20px;
+   padding-right: 200px;
+   border-radius: 10px;
+   border: none;
+   outline: 0;
+}
+
+.input-field:focus {
+    border: none;
+    outline: none;
+}
