@@ -3,7 +3,6 @@ import { Stack, Typography, Card, CardContent, CardMedia} from "@mui/material";
 import { Link } from "react-router-dom";
 
 const VideoCard = ({ items: { id, snippet} }) => {
-    console.log(snippet)
   return (
     <Link to={`/video/${id}`}>
         <Card

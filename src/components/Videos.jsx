@@ -3,7 +3,7 @@ import { Box, Stack } from "@mui/material";
 import VideoCard from "./VideoCard";
 
 const Videos = ({ videos }) => {
-  console.log(videos);
+
   return (
     <Stack direction={{ xs: "column", md: "row"}} flexWrap="wrap"
       mr="10px"

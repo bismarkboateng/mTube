@@ -19,7 +19,7 @@ const Feed = () => {
     <Stack direction="row" marginTop="20px">
       <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       <Box sx={{ ml: "20px"}}>
-          <Typography variant="h5" sx={{ color: "white", fontWeight: "bold", }}>
+          <Typography variant="h5" sx={{ color: "white", fontWeight: "bold", mb: "10px"}}>
               {selectedCategory} <span style={{ color: "red" }}>Videos</span>
           </Typography>
           <Videos videos={videos} />

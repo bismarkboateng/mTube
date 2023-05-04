@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
     <Box sx={{ backgroundColor: "#1a1919", position: "sticky", top: 0}}>
-        <Navbar />
         <BrowserRouter>
+        <Navbar />
           <Routes>
             <Route path="/" exact element={<Feed />} />
             <Route path="/video/:id" element={<VideoDetail />} />
