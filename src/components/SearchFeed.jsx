@@ -1,14 +1,35 @@
 import React from "react";
+import { Box, Typography } from "@mui/material";
+import { Videos } from "./";
+import { useState, useEffect } from "react";
+import { fetchData } from "../utils/fetchData";
 import { useParams } from "react-router-dom";
-import Videos from "./Videos";
-import { Box } from "@mui/material";
 
-const SearchFeed = () => {
+const Feed = () => {
+  const [videos, setVideos] = useState([]);
+  const searchQuery = useParams();
+
+  console.log(searchQuery)
+
+  useEffect(() => {
+      fetchData(`search?q=${searchQuery}&part=snippet`)
+        .then((data) => setVideos(data.items));
+  },[searchQuery]);
+
   return (
-    <div>
-      Search Feed
-    </div>
+      <Box sx={{ ml: "20px", maxWidth: "90%"}}>
+          
+          <Typography variant="h5" sx={{ color: "white", fontWeight: "bold", mb: "10px"}}>
+             
+            <span>{ JSON.stringify(searchQuery) }</span> <span style={{ color: "red" }}>Videos</span>
+          </Typography>
+          <Box sx={{ display: "flex"}}>
+            <Box sx={{ mr: "100px" }}/>
+            <Videos videos={videos} />
+          </Box>
+
+      </Box>
   )
 }
 
-export default SearchFeed
+export default Feed
