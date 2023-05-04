@@ -17,3 +17,29 @@
     border: none;
     outline: none;
 }
+
+.profile-image {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 35px;
+}
+
+.sidebar {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    border:none;
+
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+    margin-left: 40px;
+}

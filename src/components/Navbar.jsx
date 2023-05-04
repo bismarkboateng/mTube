@@ -32,9 +32,12 @@ const Navbar = () => {
         
       </Box>
 
-      <Box sx={{ display: "flex", alignItems: "center" }} gap={2}>
+      <Box sx={{ display: "flex", alignItems: "center" }} gap={2} mr="5px">
         <VideocamOutlinedIcon sx={{ color: "#fff", fontSize: "35px"}} />
         <NotificationsNoneOutlinedIcon sx={{ color: "#fff", fontSize: "35px"}} />
+        <div className="profile-image">
+          Image here
+        </div>
       </Box>
 
     </Stack>
