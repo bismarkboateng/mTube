@@ -1,34 +1,20 @@
 import React from "react";
 import { Stack, Box, Typography } from "@mui/material";
-import { categories } from "../utils/constants";
+import { Sidebar } from "./";
+import { useState } from "react";
+
 
 const Feed = () => {
+  const [ selectedCategory, setSelectedCategory ] = useState("Home");
+
   return (
-    <Stack direction="row">
-      <Box minHeight="95vh"
-        sx={{ borderRight: "1px solid #e3e3e3"}}
-      >
-          { categories.map((category, idx) => (
-            <button className="sidebar">
-              <span
-               style={{ marginRight: "20px", color: "red"}}
-              >{ category.icon } </span>
-              <span
-                style={{ color: "white"}}
-              >{ category.name }</span>
-
-            </button>
-
-
-          ))}
-
-          <Typography color="#fff" fontWeight="bold" p={2}>
-            Copyright mtube media 2023
+    <Stack direction="row" marginTop="20px">
+      <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      <Box sx={{ ml: "20px"}}>
+          <Typography variant="h5" sx={{ color: "white", fontWeight: "bold", }}>
+              {selectedCategory} <span style={{ color: "red" }}>Videos</span>
           </Typography>
-      </Box>
-
-      <Box>
-
+          <Videos />
       </Box>
     </Stack>
   )
