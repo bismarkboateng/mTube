@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <Box sx={{ backgroundColor: "#000", position: "sticky", top: 0}}>
+    <Box sx={{ backgroundColor: "#1a1919", position: "sticky", top: 0}}>
         <Navbar />
         <BrowserRouter>
           <Routes>
