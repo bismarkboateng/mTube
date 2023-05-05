@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MenuIcon, YouTubeIcon, SearchIcon, MicIcon, NotificationsNoneOutlinedIcon, VideocamOutlinedIcon} from "../utils/constants";
 import { Stack, Box, AppBar, Typography, Paper } from "@mui/material";
 import IconButton from '@mui/material/IconButton';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -30,10 +30,13 @@ const Navbar = () => {
 
         <Box sx={{ display: "flex", alignItems: "center"}}>
           <MenuIcon sx={{ color: "#fff", mr: "15px"}}/>
-          <YouTubeIcon sx={{ color: "red", fontSize: "40px", mr: "4px"}} />
-          <Typography variant="h5" color="#fff" fontWeight="bold">
-            Youtube
-          </Typography>
+          <Link to="/" className="link-style">
+            <YouTubeIcon sx={{ color: "red", fontSize: "40px", mr: "4px"}} />
+            <Typography variant="h5" color="#fff" fontWeight="bold">
+              Youtube
+            </Typography>
+          </Link>
+
         </Box>
 
         <Box>

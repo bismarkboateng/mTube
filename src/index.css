@@ -53,3 +53,9 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.link-style {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}

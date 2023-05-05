@@ -2,9 +2,9 @@ import React from "react";
 import { Stack, Typography, Card, CardContent, CardMedia} from "@mui/material";
 import { Link } from "react-router-dom";
 
-const VideoCard = ({ items: { id, snippet} }) => {
+const VideoCard = ({ items: { id : { videoId}, snippet} }) => {
   return (
-    <Link to={`/video/${id}`}>
+    <Link to={`/video/${videoId}`} className="link-style">
         <Card
             sx={{ maxWidth: 300,
                 mr: "15px", mb: "10px",
