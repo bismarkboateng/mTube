@@ -6,10 +6,11 @@ const VideoCard = ({ items: { id : { videoId}, snippet} }) => {
   return (
     <Link to={`/video/${videoId}`} className="link-style">
         <Card
-            sx={{ maxWidth: 300,
+            sx={{ maxWidth: "300px",
                 mr: "15px", mb: "10px",
                 backgroundColor: "#1a1919"
             }}
+            variant="rounded"
         >
             <CardMedia 
                 component="img"

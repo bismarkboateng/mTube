@@ -2,10 +2,12 @@ import React from "react";
 import { Box, Stack } from "@mui/material";
 import VideoCard from "./VideoCard";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction }) => {
 
   return (
-    <Stack direction={{ xs: "column", md: "row"}} flexWrap="wrap"
+    <Stack flexWrap="wrap"
+      direction={ direction || "row" }
+      justifyContent="start"
       mr="10px"
     >
       { videos.map((items, idx) => (

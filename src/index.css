@@ -1,5 +1,5 @@
 * {
-    body: 0;
+    padding: 0;
     margin: 0;
 }
 
@@ -58,4 +58,14 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+.react-player { 
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.comment-section {
+    margin-top: 20px;
+    padding-top: 20px;
 }
