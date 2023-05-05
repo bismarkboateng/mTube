@@ -7,7 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 
 const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const navigate = useNavigate();
 
@@ -15,10 +15,10 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (searchQuery) {
-      navigate(`/search/${searchQuery}`);
+    if (searchTerm) {
+      navigate(`/search/${searchTerm}`);
 
-      setSearchQuery("");
+      setSearchTerm("");
     }
 
   }
@@ -51,7 +51,8 @@ const Navbar = () => {
             
           >
             <input placeholder="Search..." className="input-field" 
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
             
             <IconButton
